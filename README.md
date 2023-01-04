@@ -5,7 +5,7 @@
 
 A simple fetch for those who are lazy.
 
-[Screenshot](assets/screenshot.png)
+![Screenshot](assets/screenshot.png)
 
 # Usage
 
@@ -15,7 +15,7 @@ Step 3 - Profit
 
 # Installation
 
-`````bash
+```bash
 $ git clone https://gitlab.com/Jocadbz/lazyfetch.git
 $ cd lazyfetch
 $ v -prod . # You need V compiler
