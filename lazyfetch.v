@@ -14,6 +14,7 @@ fn main() {
 		colors.bold("OS: ${os_parser()}\n") +
 		colors.bold("KERNEL: ${kernel()}") +
 		colors.bold("SHELL: ${shell()}\n") +
+		colors.bold("WM: ${desktop()}\n") +
 		colors.bold("UPTIME: ${uptime()}") +
 		colors.bold("TERMINAL: ${term()}")
 		) 
@@ -22,6 +23,11 @@ fn main() {
 fn user() string {
 	user := os.getenv('USERNAME')
 	return user
+}
+
+fn desktop() string {
+	wm := os.getenv("DESKTOP_SESSION")
+	return wm
 }
 
 fn os_parser() string {
