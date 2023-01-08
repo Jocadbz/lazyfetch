@@ -21,12 +21,15 @@ fn main() {
 }
 
 fn user() string {
-	user := os.getenv('USERNAME')
-	return user
+	user := os.execute('whoami')
+	return user.output.replace('\n', '')
 }
 
 fn desktop() string {
-	wm := os.getenv("DESKTOP_SESSION")
+	mut wm := os.getenv("DESKTOP_SESSION")
+	if wm == '' {
+		return "No wm info provided"
+	}
 	return wm
 }
 
@@ -43,7 +46,7 @@ fn kernel() string {
 
 fn shell() string {
 	shell := os.getenv("SHELL")
-	return shell
+	return shell.replace("/usr/bin/", '')
 }
 
 fn uptime() string {
